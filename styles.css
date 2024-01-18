@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+header {
+  background-color: transparent;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.5s ease-in-out; /* Smooth background color transition */
+}
+
+header.scrolled {
+  background-color: #333; /* Background color when scrolled */
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd700;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.hero {
+  background-image: url("maserati\ mc20.jpg"); /* Update with your white car background image */
+  background-size: cover;
+  background-position: center;
+  color: #333; /* Dark text color for better visibility on a white background */
+  text-align: center;
+  padding: 150px 0;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white overlay for better contrast */
+}
+
+.hero h2 {
+  margin: 0;
+  z-index: 1;
+  font-size: 3em;
+  color: #ffd700; /* Gold text color for a pop of color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Subtle text shadow for depth */
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #fff; /* White text color for better contrast */
+}
+
+.car-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.car {
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.car:hover {
+  transform: scale(1.05);
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.car h3 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+.car p {
+  padding: 15px;
+  margin: 0;
+}
+.services {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.services h2 {
+  text-align: center;
+}
+
+.service {
+  text-align: center;
+}
+
+.service img {
+  width: 80px;
+  height: 80px;
+}
+
+.pricing {
+  padding: 50px 0;
+}
+
+.price-card {
+  text-align: center;
+}
+
+.price {
+  font-size: 24px;
+  color: #333;
+}
+
+.booking {
+  background-color: #e6e6e6;
+  padding: 50px 0;
+}
+
+.booking h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+form {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+}
+
+.our-cars {
+  background-color: #e6e6e6;
+}
+
+.our-cars h2 {
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.car-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.car {
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.car:hover {
+  transform: scale(1.05);
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car:hover img {
+  transform: none;
+}
+
+.car h3 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+.car p {
+  padding: 15px;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.car:hover p {
+  opacity: 1;
+}
+
+.pricing {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.price-card:hover {
+  transform: scale(1.05);
+}
+
+.services ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.booking form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.booking input,
+.booking select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.booking button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.booking button:hover {
+  background-color: #e5bf00;
+}
+
+.contact {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.contact h2 {
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact p {
+  text-align: center;
+  color: #666;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #e5bf00;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-info h3 {
+  color: #333;
+}
+
+.contact-info p {
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
