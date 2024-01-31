@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,30 +24,39 @@ body {
   margin: 0 20px;
 }
 
+/* Navbar Styles */
 header {
   background-color: transparent;
   padding: 20px 0;
   position: absolute;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.5s ease-in-out; /* Smooth background color transition */
+  transition: background-color 0.5s ease-in-out;
 }
 
 header.scrolled {
-  background-color: #333; /* Background color when scrolled */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle box shadow on scroll */
 }
 
-header h1 {
-  color: #fff;
-  font-size: 1.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+.logo {
+  font-size: 32px;
+  color: #333; /* Dark text color for better visibility on a white background */
+  text-decoration: none;
+  margin: 0 20px;
+  font-family: "Pacifico", cursive; /* Example: using the Pacifico font for a stylish look */
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 nav ul {
@@ -58,10 +67,11 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #333; /* Dark text color */
   font-weight: bold;
   font-size: 1.2em;
   position: relative;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
 
 nav a::before {
@@ -71,10 +81,14 @@ nav a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffd700;
+  background-color: #333;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #e5bf00; /* Yellow color on hover */
 }
 
 nav a:hover::before {
@@ -82,6 +96,7 @@ nav a:hover::before {
   transform: scaleX(1);
 }
 
+/* Hero Section Styles */
 .hero {
   background-image: url("maserati\ mc20.jpg"); /* Update with your white car background image */
   background-size: cover;
@@ -111,14 +126,31 @@ nav a:hover::before {
   margin: 0;
   z-index: 1;
   font-size: 3em;
-  color: #ffd700; /* Gold text color for a pop of color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Subtle text shadow for depth */
+  color: #333; /* Dark text color for better visibility on a white background */
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */
+}
+
+.hero h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #e5bf00,
+    #ffd700
+  ); /* Gradient for a stylish effect */
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  z-index: -1;
 }
 
 .hero p {
   font-size: 1.5em;
   margin-top: 20px;
-  color: #fff; /* White text color for better contrast */
+  color: #333; /* Dark text color for better contrast */
 }
 
 .car-gallery {
@@ -212,7 +244,9 @@ form {
   color: #fff;
   background-color: #333;
 }
-
+#booknow {
+  margin-top: 340px;
+}
 .our-cars {
   background-color: #e6e6e6;
 }
